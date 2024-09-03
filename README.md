@@ -14,13 +14,9 @@ It gives statistics in the following format:
 **code_switched_speech.wav**:
 
 ```
-mon: 6.06%
-jav: 51.52%
-glv: 3.03%
-sun: 27.27%
-cym: 3.03%
-abk: 6.06%
-haw: 3.03%
+la: 50.00%
+jw: 43.75%
+en: 6.25%
 ```
 
 ## Install

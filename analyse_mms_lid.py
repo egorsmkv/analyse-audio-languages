@@ -9,10 +9,10 @@ device = torch.device("cuda:0")
 
 filename = "code_switched_speech.wav"
 chunk_size = 5.0
-default_vad_options = {"vad_onset": 0.500, "vad_offset": 0.363}
+vad_options = {"vad_onset": 0.500, "vad_offset": 0.363}
 
 vad_model = load_vad_model(
-    "models/whisperx-vad-segmentation.bin", device, **default_vad_options
+    "models/whisperx-vad-segmentation.bin", device, **vad_options
 )
 
 lid_processor = AutoFeatureExtractor.from_pretrained("facebook/mms-lid-256")
@@ -30,8 +30,8 @@ vad_segments = vad_model({"waveform": torch.tensor(audio), "sample_rate": sr})
 vad_segments = merge_chunks(
     vad_segments,
     chunk_size,
-    onset=default_vad_options["vad_onset"],
-    offset=default_vad_options["vad_offset"],
+    onset=vad_options["vad_onset"],
+    offset=vad_options["vad_offset"],
 )
 
 def calculate_language_percentages(language_counts):

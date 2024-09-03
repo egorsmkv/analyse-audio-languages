@@ -1,0 +1,12 @@
+**/__pycache__/
+.ipynb_checkpoints
+
+models/whisperx-vad-segmentation.bin
+
+segments/
+
+file.wav
+
+.venv/
+
+code_switched_speech.wav

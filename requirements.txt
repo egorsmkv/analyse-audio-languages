@@ -1,0 +1,9 @@
+torch>=2
+pyannote.audio
+sphn
+
+yt-dlp
+
+transformers
+
+openai-whisper
